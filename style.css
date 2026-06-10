@@ -103,6 +103,10 @@ header p {
   padding: 0 0 1rem;
 }
 
+.timeline-message {
+  text-align: center;
+}
+
 .timeline-card {
   background: white;
   border-radius: 1rem;
@@ -115,6 +119,58 @@ header p {
   overflow: hidden;
   visibility: hidden;
   transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease;
+}
+
+.timeline-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.timeline-card-copy {
+  flex: 1 1 320px;
+  min-width: 280px;
+}
+
+.timeline-card-secondary-image,
+.timeline-card-image {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  margin-top: 1rem;
+}
+
+.timeline-card-image {
+  flex: 0 0 320px;
+  width: 360px;
+  margin-top: 52px;
+}
+
+@media (max-width: 760px) {
+  .timeline-card-body {
+    display: block;
+  }
+
+  .timeline-card-image,
+  .timeline-card-secondary-image {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .timeline-card-body {
+    display: block;
+  }
+
+  .timeline-card-image {
+    width: 100%;
+    flex: 1 1 auto;
+    margin-top: 1rem;
+  }
 }
 
 .timeline-card.show {
